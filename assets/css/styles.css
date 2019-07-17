@@ -17,3 +17,35 @@ body {
     color:red;
 }
 
+@media screen and (max-width: 1000px) {
+    /* The body's bg color will be #333 */
+    body { 
+        height: 600px;
+    }
+
+
+    h1 { 
+        font-size: 20px;
+         /* Background image will change */
+    
+    }
+   
+    }
+    /* Animation */
+@keyframes 
+}
+
+@media screen and (max-width: 800px) {
+    /* The body's bg color will be #333 */
+    
+    body { 
+        height: 300px;
+    }
+    h1 { 
+        font-size: 20px;
+         /* Background image will change */
+    
+    }
+  
+    }
+
