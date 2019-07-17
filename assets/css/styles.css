@@ -1,5 +1,19 @@
+h1 { 
+    color: red;
+}
+#small { 
+
+    color:red;
+}
+
 body { 
 
     background: url("../images/Run-DMC-Adidas-1024x729.png");
     height: 800px;
 }
+
+.topic { 
+
+    color:red;
+}
+

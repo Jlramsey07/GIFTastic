@@ -4,7 +4,7 @@ var topics = ["lil wayne", "Jay-Z", "Bob Marley", "Kanye west", "eminem", "Meek 
 
 function displayTopicInfo() {
 	var musicians = $(this).attr("data-name");
-	var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=JbAze3Bq2K81GsPhzV1gSBiyZyA2vR38&q=" + musicians + "&limit=10&offset=0&rating=PG-13&lang=en";
+	var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=Km0F0XusyMDHtFK2iedq7AnQksu1qPpd&q=" + musicians + "&limit=10&offset=0&rating=PG-13&lang=en";
 
 	$.ajax({
 		url: queryURL, 
@@ -12,26 +12,26 @@ function displayTopicInfo() {
 	}).done(function(response) {
 		//sets the Length for the next loop
 		var results = response.data;
-		//Clear Previous images
+		//Clear Previous 
 		$("#musics").empty();
-		// For Loop here to show multiple Giphys
+		// For Loop  to show multiple Giphys
 		for (var i = 0; i < results.length; i++) {
 		
 		
 		var topicDiv = $("<div class='musicians'>");
-		// Storing the rating data in variable
+		
 		var rating = response.data[i].rating;
-		// Creating Element to display rating 
+		// Create Element  rating 
 		var pRate = $("<p>").text("Rating: " + rating);
 		// Adding Rating to Topic Div
 		topicDiv.append(pRate);
-		// Variable to hold still image from from Giphy
+		
 		var giphyImgStill = response.data[i].images.downsized_still.url;
-		// Variable to hold motion image from Giphy
+		
 		var giphyImgMotion = response.data[i].images.downsized.url;
 		// Create Image Element
 		var image = $("<img>").attr("src", giphyImgStill);
-		//update image with more attributes
+		// image attributes
 		image.attr("data-still", giphyImgStill);
 		image.attr("data-animate", giphyImgMotion);
 		image.attr("data-state", "still");
