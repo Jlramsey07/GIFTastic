@@ -10,7 +10,7 @@ function displayTopicInfo() {
 		url: queryURL, 
 		method: "GET"
 	}).done(function(response) {
-		//sets the Length for the next loop
+		//sets the Length for loop
 		var results = response.data;
 		//Clear Previous 
 		$("#musics").empty();
@@ -104,10 +104,10 @@ function flipAnimate() {
 	if (state === "still") {
         $(item).attr("src", $(item).attr("data-animate"));
         $(item).attr("data-state", "animate");
-        // console.log(this);
+        
       } else {
         $(item).attr("src", $(item).attr("data-still"));
         $(item).attr("data-state", "still");
-        // console.log(this);
+        
       };
 };
